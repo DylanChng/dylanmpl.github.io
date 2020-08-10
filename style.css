@@ -1,0 +1,555 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 16px Montserrat, sans-serif;
+  line-height: 1.8;
+  color: #fff;
+}
+
+/*
+# -------------- nav stuff ----------------
+*/
+.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+
+.naviItem{
+  color: #1bac91 !important;
+}
+
+.naviItem:hover{
+  color: #1bac91 !important;
+}
+
+.mainLogo {
+  transition: all .2s ease-in-out;
+}
+
+.mainLogo:hover {
+  transform: scale(1.1);
+  transition: transform .25s ease-in-out;
+}
+
+p {font-size: 16px;}
+
+.margin {margin-bottom: 45px;}
+
+/*
+# ---------------- tray -------------------
+*/
+.myTray {
+  margin-top: 10%;
+  height: 70%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  right: -10px;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.myTray .closebtn {
+  position: fixed;
+  text-decoration: none;
+  color:#1bac91;
+  display: block;
+  transition: 0.3s;
+  z-index: 5;
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+#trayBtn {
+  position: fixed;
+  top: 300px;
+  right: -5px;
+  z-index: 4;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom:10px;
+  border-radius: 4px;
+}
+
+.grayLine{
+  background-color: #eee;
+}
+
+@media screen and (max-height: 450px) {
+  .myTray {padding-top: 15px;}
+  .myTray a {font-size: 18px;}
+}
+
+/*
+# ---------------- main content -------------------
+*/
+
+.bg-1 {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.bg-2 {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.bg-3 {
+  background-color: #f2f9f8;
+  color: #000;
+}
+
+.inner3{
+  background-color: #f2f9f8;
+}
+
+.bg-4 {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+h3 {
+  margin: 15px 0 10px 0;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #1bac91;
+}
+
+h4 {
+  margin: 0px 0 10px 0;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 50px;
+  color: #1bac91;
+}
+
+#backTo {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  background-color: #1bac91;
+  color: #000;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom:10px;
+  border-radius: 4px;
+}
+
+#backTo:hover {
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
+}
+
+.btn-get-started {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-get-started:hover {
+  border-color: #1bac91;
+  background: #1bac91;
+  text-decoration: none;
+  color: #000;
+}
+
+.sideBar{
+  font-size: 20px;
+  overflow-x:  hidden;
+  overflow-y:  hidden;
+}
+
+.smallText{
+  font-size: 13px;
+}
+
+/*
+# -----------------All transitions-------------------
+*/
+
+.zoom{
+  transform: scale(1.0);
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.zoom:hover{
+  transform: scale(1.1);
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+/*
+# ----------------- Counter-------------------
+*/
+#shiva
+{
+  width: 100px;
+	height: 100px;
+	background: red;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+  float:left;
+  margin:5px;
+}
+.count
+{
+  line-height: 100px;
+  color:white;
+  margin-left:30px;
+  font-size:25px;
+}
+
+/*
+# -----------------Events Section-------------------
+*/
+.turqoisePill{
+  background: #1bac91 !important;
+}
+
+.turqoiseLine{
+  border-color: #1bac91 !important;
+}
+
+.turqoiseText{
+  color: #1bac91 !important;
+}
+
+/*
+# -----------------banner Section-------------------
+*/
+#banner {
+  width: 100%;
+  height: calc(100vh - 0px);
+  background: url("resource/bookchair.jpg") center center;
+  background-size: cover;
+  position: relative;
+  margin-top:0px;
+  padding: 0;
+}
+
+#banner:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#banner .container {
+  z-index: 2;
+}
+
+#banner h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#banner h2 {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 35px;
+  font-size: 24px;
+}
+
+.btnSearch {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #1bac91;
+}
+
+.btnSearch:hover {
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
+  color: #fff;
+}
+
+@media (min-width: 1024px) {
+  #banner {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 992px) {
+  #banner {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+  }
+}
+
+@media (max-width: 768px) {
+  #banner h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #banner h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+/*
+# -----------------banner 2 Section-------------------
+*/
+#bannerTwo {
+  width: 100%;
+  height: calc(100vh - 0px);
+  background: url("resource/shelves.jpg") center center;
+  background-size: cover;
+  position: relative;
+  margin-top:0px;
+  padding: 0;
+}
+
+#bannerTwo:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#bannerTwo .container {
+  z-index: 2;
+}
+
+#bannerTwo h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+
+#bannerTwo h2 {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 35px;
+  font-size: 24px;
+}
+
+@media (min-width: 1024px) {
+  #bannerTwo {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 992px) {
+  #bannerTwo {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+  }
+}
+
+@media (max-width: 768px) {
+  #bannerTwo h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #bannerTwo h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+# --------------- Back to top button -------------
+*/
+.backToTop {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  right: 15px;
+  bottom: 15px;
+  background: #1bac91;
+  color: #fff;
+}
+
+.backToTop:hover {
+  color: #fff;
+  background: #18967e;
+}
+
+/*
+# -----------------Events Timeline-------------------
+*/
+/* Import */
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Oswald:400,300,700);
+
+/* Variables */
+
+@background: #252827;
+
+@color-primary: #4298C3;
+@color-light: white;
+@spacing: 50px;
+@radius: 4px;
+
+@date: 120px;
+@dotborder: 4px;
+@dot: 11px;
+@line: 4px;
+
+@font-title: 'Oswald', sans-serif;
+@font-text: 'Source Sans Pro', sans-serif;
+
+/* Base */
+
+body {
+  background: @background;
+  font-size: 16px;
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1 {
+ font-family: @font-title;
+ letter-spacing: 1.5px;
+ color: @color-light;
+ font-weight: 100;
+ font-size: 2.4em;
+}
+
+#content {
+  margin-top: @spacing;
+  text-align: center;
+}
+
+/* Timeline */
+
+.timeline {
+  border-left: @line solid @color-primary;
+  border-bottom-right-radius: @radius;
+  border-top-right-radius: @radius;
+  background: fade(@color-light, 3%);
+  color: fade(white, 80%);
+  font-family: @font-text;
+  margin: @spacing auto;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  padding: @spacing;
+  list-style: none;
+  text-align: left;
+  font-weight: 100;
+  max-width: 30%;
+
+  h1, h2, h3 {
+   font-family: @font-title;
+   letter-spacing: 1.5px;
+   font-weight: 100;
+   font-size: 1.4em;
+  }
+
+  .event {
+    border-bottom: 1px dashed fade(@color-light, 10%);
+    padding-bottom: (@spacing * 0.5);
+    margin-bottom: @spacing;
+    position: relative;
+
+    &:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: none;
+    }
+
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      top: 0;
+    }
+
+    &:before {
+      left: (((@date * 0.6) + @spacing + @line + @dot + (@dotborder * 2)) * 1.5) * -1;
+      color: fade(@color-light, 40%);
+      content: attr(data-date);
+      text-align: right;
+      font-weight: 100;
+      font-size: 0.9em;
+      min-width: @date;
+    }
+
+    &:after {
+      box-shadow: 0 0 0 @dotborder fade(@color-primary,100%);
+      left: (@spacing + @line + (@dot * 0.35)) * -1;
+      background: lighten(@background,5%);
+      border-radius: 50%;
+      height: @dot;
+      width: @dot;
+      content: "";
+      top: 5px;
+    }
+  }
+}
+
+/*
+# --------------- extras -------------
+*/

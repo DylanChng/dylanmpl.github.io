@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href=""/>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <!--Styles-->
+  <link rel="stylesheet" href="style.css">
+  <title>Malaysian Public Library</title>
+  <link rel="shortcut icon" href="resource/bookfav1.png"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-white border">
+    <a class="navbar-brand ml-5" href="index.html"><img src="resource/MPL1.png" width="150" height="50" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="myNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" style="color:#1bac91;" type="button" data-toggle="modal" data-target="#memberModal">Membership</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link naviItem" href="events.html">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link naviItem" href="index.html#aboutUs">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link naviItem" href="index.html#partnership">Sponsorship</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link naviItem" href="index.html#contactUs">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link naviItem" href="index.html#vacancy">Join Our Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link naviItem" href="resource.html">E-Portals</a>
+        </li>
+      </ul>
+      <span>
+        <button class="btn btn-outline-warning mr-2">Sign Up</button>
+        <button class="btn btn-outline-info">Log In</button>
+      </span>
+      <span class="ml-2">
+        <div class="dropdown">
+          <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Language
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">English</a>
+            <a class="dropdown-item" href="#">Chinese</a>
+          </div>
+        </div>
+      </span>
+    </div>
+</nav>
+
+  <!-- search -->
+  <div class="container-fluid">
+    <div class="container text-center">
+      <h3>Browse Online Database</h3>
+    </div>
+    <div class="container text-center">
+    <form>
+      <input class="form-control text-center" type="search" placeholder="Journals, Databases, E-books" aria-label="Search">
+      <a href="research.html" class="btnSearch mt-1"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+      </svg> Search</a>
+    </form>
+  </div>
+    </div>
+
+    <!-- tabs -->
+    <div class="container-fluid pt-0 ">
+      <div class="text-center">
+        <nav>
+          <div class="nav nav-tabs nav-fill" id="tabServ" role="tablist">
+            <a class="nav-item nav-link turqoiseText font-weight-bold active" id="dbTab" data-toggle="tab" href="#db" role="tab" aria-controls="nav-db" aria-selected="true">Online Databases</a>
+            <a class="nav-item nav-link turqoiseText font-weight-bold" id="journalTab" data-toggle="tab" href="#journal" role="tab" aria-controls="nav-journal" aria-selected="false">Journals</a>
+            <a class="nav-item nav-link turqoiseText font-weight-bold" id="ebookTab" data-toggle="tab" href="#ebook" role="tab" aria-controls="nav-ebook" aria-selected="false">E-Books</a>
+          </div>
+        </nav>
+
+        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent"><!-- whole tab content -->
+          <!-- DB-->
+          <div class="tab-pane fade show active" id="db" role="tabpanel" aria-labelledby="nav-db-tab">
+            <div class="container-fluid">
+            <div class="container text-center">
+            <table class="table inner3 border shadow">
+              <theads>
+                <tr>
+                  <th scope="col" class="bg-dark text-white">Online Databases</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    A
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://academicjournals.org/search" target="_blank">Academic Journals</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.u-library.gov.my/portal/web/guest/home" target="_blank">Alkem Digital Library (Access via u-Pustaka Portal)</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    B
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.u-library.gov.my/portal/web/guest/home" target="_blank">BLIS (Access via u-Pustaka Portal)</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.bartleby.com/" target="_blank">Bartleby.com</a>
+                  </td>
+                </tr>
+                <tr>
+                <tr>
+                  <td>
+                    C
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://cds.cern.ch/" target="_blank">CERN Document Server</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    D
+                  </td>
+                </tr>
+              <tr>
+                <td>
+                  <a href="http://www.dart-europe.eu/basic-search.php" target="_blank">Dart-Europe E-theses Portal</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://doaj.org/" target="_blank">DOAJ Directory of Open Access Journals</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://libportal.nus.edu.sg/frontend/ms/sea-chinese-historical-doc/about-sea-chinese-historical-doc" target="_blank">东南亚华人历史文献</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://oopus.info/ccat/" target="_blank">电子汉籍联合目录 </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  G
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="http://ebooks.lib.ntu.edu.tw/Home/ListBooks" target="_blank">国立台湾大学图书馆公开取用电子书</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="http://www.guoxuedashi.com/" target="_blank">国学大师</a>
+                </td>
+              </tr>
+
+                </tbody>
+              </table>
+              </div>
+            </div>
+
+          </div><!-- DB end -->
+
+          <!-- journals-->
+          <div class="tab-pane fade" id="journal" role="tabpanel" aria-labelledby="nav-journal-tab">
+            <div class="container-fluid">
+            <div class="container text-center">
+            <table class="table inner3 border shadow">
+              <theads>
+                <tr>
+                  <th scope="col" class="bg-dark text-white">Journals</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    A
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://academicjournals.org/search" target="_blank">Academic Journals</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.asymptotejournal.com/" target="_blank">Asymptote </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    B
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.nlb.gov.sg/Browse/BiblioAsia.aspx" target="_blank">Biblio Asia</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.bloomberg.com/businessweek" target="_blank">Business Week</a>
+                  </td>
+                </tr>
+                <tr>
+                <tr>
+                  <td>
+                    C
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://academic.oup.com/ckj" target="_blank">Clinical Kidney Journal</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    D
+                  </td>
+                </tr>
+              <tr>
+                <td>
+                  <a href="http://www.dart-europe.eu/basic-search.php" target="_blank">Dart-Europe E-theses Portal</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://doaj.org/" target="_blank">DOAJ Directory of Open Access Journals</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://libportal.nus.edu.sg/frontend/ms/sea-chinese-historical-doc/about-sea-chinese-historical-doc" target="_blank">东南亚华人历史文献</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://oopus.info/ccat/" target="_blank">电子汉籍联合目录 </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  E
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="http://www.cuhk.edu.hk/ics/21c/zh/issues/" target="_blank">二十一世纪</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  G
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://www.ncl.edu.tw/periodicallist_300.html" target="_blank">国家图书馆馆刊</a>
+                </td>
+              </tr>
+
+                </tbody>
+              </table>
+              </div>
+            </div>
+
+          </div><!-- journals end -->
+
+          <!-- ebook -->
+          <div class="tab-pane fade" id="ebook" role="tabpanel" aria-labelledby="nav-ebook-tab">
+            <div class="container-fluid">
+            <div class="container text-center">
+            <table class="table inner3 border shadow">
+              <theads>
+                <tr>
+                  <th scope="col" class="bg-dark text-white" target="_blank">E-Books</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    D
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.jjwxc.net/" target="_blank">都市言情小说</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href=" https://m.dongmanmanhua.cn/" target="_blank">咚漫</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    E
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href=" http://cn.epubee.com/books/" target="_blank">epubee</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    F
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://www.fqxsw.cc/" target="_blank">番茄小说网</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    J
+                  </td>
+                </tr>
+              <tr>
+                <td>
+                  <a href="https://m.jjxsw.la/" target="_blank">久久小说网</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="http://www.bestory.com/" target="_blank">精品文学网</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://libportal.nus.edu.sg/frontend/ms/sea-chinese-historical-doc/about-sea-chinese-historical-doc" target="_blank">东南亚华人历史文献</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://oopus.info/ccat/" target="_blank">电子汉籍联合目录 </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  G
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="http://ebooks.lib.ntu.edu.tw/Home/ListBooks" target="_blank">国立台湾大学图书馆公开取用电子书</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="http://www.guoxuedashi.com/" target="_blank">国学大师</a>
+                </td>
+              </tr>
+
+                </tbody>
+              </table>
+              </div>
+            </div>
+
+          </div><!-- ebook end -->
+        </div><!-- whole tab content -->
+      </div>
+    </div>
+
+  <!-- membership modal-->
+  <div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content text-dark">
+        <div class="modal-header">
+          <h4>Membership Subscription Rates</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <p class="font-weight-bold text-info">Registration Fees</p>
+            <p>Students RM 2.00 | Non-Students RM 5.00</p>
+            <p class="font-weight-bold text-info">Monthly Subscription Fees</p>
+            <table class="table table-borderless">
+              <thead>
+                <tr>
+                  <th scope="col">Category</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Adult</td>
+                  <td class="text-success">RM 5.00/Month</td>
+                </tr>
+                <tr>
+                  <td>Student/Retiree/OKU</td>
+                  <td class="text-success">RM 3.00/Month</td>
+                </tr>
+              </tbody>
+            </table>
+            <hr>
+          </div>
+          <div class=" container mb-5">
+          <h5>Please provide the following:</h5>
+              <ul>
+                <li>Double sided photocopy of MYCARD (Identity Card) or birth certificate for those who are below 12 years old.</li>
+                <li>Photocopy of latest water bill or telephone bill (verification of correspondence address).</li>
+                <li>2 copies of passport size photo.</li>
+              </ul>
+          </div>
+          <div class=" container">
+            <h5>Rules and Regulations</h5>
+            <ul>
+              <li><p>Outstation members/non-Malaysians are required to pay a deposit of RM60.00 (refundable with
+                 official receipt)
+              </p>
+              </li>
+              <li>
+              <p>Loans are limited to 4 books each time</p>
+              <ul>
+                <li>The loan period is 1 month; renewals are permitted. </li>
+                <li>For overdue books, a charge of 10 cents per day per book is levied. </li>
+              </ul>
+            </li>
+            <li>
+              <p>For children below 12 years of age, their parent(s) are required to be an active member.</p>
+            </li>
+          </ul>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-info" data-dismiss="modal">Subscribe Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div>
+        <button class="btn btn-sm"><a id="backTo" class="text-white" href="#top" style="text-decoration:none">&uarr;</a></button>
+      </div>
+
+      <div class="">
+        <button class="btn btn-warning trayBtn" id="trayBtn" onclick="openNav()"> <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bookmarks" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7 13l5 3V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10.234z"/>
+          <path d="M14 14l-1-.6V2a1 1 0 0 0-1-1H4.268A2 2 0 0 1 6 0h6a2 2 0 0 1 2 2v12z"/>
+        </svg></button>
+      </div>
+
+      <!-- tray -->
+      <div id="myTray" class="myTray bg-dark rounded-left">
+        <h4 class="text-center">Borrowed Books</h4>
+          <a type="button" href="javascript:void(0)" class="closebtn mt-0 pt-0" onclick="closeNav()">&times;</a>
+
+        <div class="container sideBar text-white text-center">
+          <br>
+            <h5 class="text-info text-center">John Tan Kiong Hee</h5>
+          <br>
+          <p class="text-success">1. Harry P. The Deadly Hollows</p> <p class="smallText">12 Days Left</p>
+          <p class="text-success">2. Harry P. The Prison of AKB</p>  <p class="smallText">10 Days Left</p>
+          <p class="text-success">3. Harry P. The Deadly Hollows</p> <p class="smallText">5 Days Left</p>
+          <p class="text-success">4. Game Of Thrones Season 8</p>             <p class="smallText"> 22 Days Left</p>
+          <p class="text-success">5. Tales of The Wildlings</p> <p class="smallText">12 Days Left</p>
+          <p class="text-success">6. Java 2 2020</p>  <p class="smallText">10 Days Left</p>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container-fluid text-center bg-dark p-4">
+          <small>2020 Copyright &copy; Malaysian Public Library</small>
+        </div>
+      </footer>
+
+    <script>
+        $('.count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+
+    /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("myTray").style.width = "250px";
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("myTray").style.width = "0";
+      }
+    </script>
+</body>
+</html>
